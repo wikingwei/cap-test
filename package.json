@@ -1,0 +1,10 @@
+{ 
+  "name": "cap-projects-demo",
+  "version": "1.0.0",
+  "description": "repo root for multiple cap projects", 
+  
+  "scripts": {
+    "start": "cd app && npm start"
+  }
+  
+}
