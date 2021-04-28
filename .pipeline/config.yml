@@ -7,7 +7,7 @@ stages:
     mavenExecuteStaticCodeChecks: false
     npmExecuteLint: false
   Additional Unit Tests:
-    npmExecuteScripts: false
+    npmExecuteScripts: true
     karmaExecuteTests: false
   Release:
     cloudFoundryDeploy: false
@@ -15,3 +15,5 @@ stages:
 steps:
   artifactPrepareVersion:
     versioningType: "cloud_noTag"
+  npmExecuteScripts:
+    runScripts: ['start']
