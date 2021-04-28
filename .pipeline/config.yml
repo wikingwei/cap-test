@@ -5,7 +5,7 @@ general:
 stages:
   Build:
     mavenExecuteStaticCodeChecks: false
-    npmExecuteLint: v
+    npmExecuteLint: false
   Additional Unit Tests:
     npmExecuteScripts: false
     karmaExecuteTests: false
