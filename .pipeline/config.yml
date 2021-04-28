@@ -1,0 +1,17 @@
+---
+general:
+  pipeline: "sap-cloud-sdk"
+  buildTool: "npm"
+stages:
+  Build:
+    mavenExecuteStaticCodeChecks: false
+    npmExecuteLint: v
+  Additional Unit Tests:
+    npmExecuteScripts: false
+    karmaExecuteTests: false
+  Release:
+    cloudFoundryDeploy: false
+    tmsUpload: false
+steps:
+  artifactPrepareVersion:
+    versioningType: "cloud_noTag"
