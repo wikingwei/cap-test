@@ -5,10 +5,13 @@ WORKDIR /usr/src/app
 # Install app dependencies
 # This will download and install all Node.JS dependencies and put them into the workdir/node_modules
 COPY app/package*.json ./
-RUN npm install
+RUN npm install && npm i -g @sap/cds-dk && cds deploy --to sqlite
+
 # Bundle app source
 COPY app ./
 # expose the port which is opened by CDS by default
 EXPOSE 4004
 # run the cap-service
-CMD [ "npm", "start" ]
+#CMD [ "npm", "start" ]
+
+CMD [ "cds", "watch" ]
