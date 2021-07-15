@@ -18,7 +18,7 @@
     "sqlite3": "^5.0.0"
   },
   "scripts": {
-    "start": "npx cds run",
+    "start": "npx cds deploy --to sqlite && npx cds run",
     "debug": "npx --node-arg=--inspect cds run",
     "deploy:cf": "mbt build && cf deploy mta_archives/faq_1.0.0.mtar -f"
   },
